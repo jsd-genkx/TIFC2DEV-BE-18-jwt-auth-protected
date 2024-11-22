@@ -14,7 +14,7 @@ const user = {
 const JWT_SECRET = "your-secret";
 
 // Generating a JWT Token
-const token = jwt.sign({ user }, JWT_SECRET, { expiresIn: '1h' });
+const token = jwt.sign(user, JWT_SECRET, { expiresIn: '1h' });
 console.log('token = ', token);
 
 // Verifying a JWT Token
