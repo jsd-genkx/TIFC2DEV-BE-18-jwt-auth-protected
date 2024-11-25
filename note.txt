@@ -1,0 +1,15 @@
+________ /register  ________
+1. bcrypt -> hash password -> save DB
+________ /login  ________
+1. bcrypt -> compare >>body.password<<  with >>hash password from DB<<
+2. jwt       -> create token using serect and payload (user)
+3. return token
+________ authMiddleware ________
+1. use jwt from bearer token  -> verify
+2. req.payload = payload of JWT
+________ /protected ________
+1. authMiddleware
+2. Be able to use req.payload
+________ /admin ________
+1. authMiddleware
+2. Be able to use req.payload

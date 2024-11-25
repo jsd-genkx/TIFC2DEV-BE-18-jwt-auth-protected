@@ -12,6 +12,8 @@ app.get('/', (req, res) => {
 });
 
 app.get('/protected', authenticateToken, (req, res) => {
+    console.log('req.user = ', req.user);
+
     res.status(200).json({ message: "This is a protected route", user: req.user });
 });
 
